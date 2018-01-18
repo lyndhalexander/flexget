@@ -198,6 +198,15 @@ templates:
               recipients:
                 - username: '{? telegram.username ?}'
 
+  email-notify:
+    notify:
+      task:
+        template: html
+        via:
+          - email:
+              autofrom: yes
+              to: '{? email.recipients ?}'
+
 tasks:
   versioncheck:
     version_checker:
