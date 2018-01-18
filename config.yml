@@ -277,6 +277,7 @@ tasks:
       - transmission-series
       - reject
       - series-notify
+      - email-notify
     discover:
       what:
         - next_series_episodes: yes
@@ -294,6 +295,7 @@ tasks:
       - transmission-movies
       - reject
       - movies-notify
+      - email-notify
     discover:
       what:
         - trakt_list:
@@ -332,6 +334,7 @@ tasks:
     template:
       - transmission-series
       - series-notify
+      - email-notify
     exec:
       on_output:
         for_accepted: rm -rf "{{location}}"
@@ -349,6 +352,7 @@ tasks:
     template:
       - transmission-movies
       - movies-notify
+      - email-notify
     exec:
       on_output:
         for_accepted: rm -rf "{{location}}"
@@ -403,6 +407,7 @@ tasks:
       - transmission-movies
       - reject
       - movies-notify
+      - email-notify
     disable:
       - seen
       - seen_info_hash
@@ -434,6 +439,7 @@ tasks:
       - transmission-series
       - reject
       - series-notify
+      - email-notify
     content_size:
       max: 900
       min: 20
@@ -619,6 +625,7 @@ tasks:
       - transmission-series
       - reject
       - series-notify
+      - email-notify
     discover:
       release_estimations: loose
       what:
